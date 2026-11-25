@@ -2,28 +2,29 @@
 
 [![¿Se puede pronosticar LaLiga mejor que Bet365?](docs/portada.png)](https://manuferrod.github.io/pronostico-laliga/)
 
-**[Ver la página del proyecto](https://manuferrod.github.io/pronostico-laliga/)**: el pronóstico de la próxima jornada, los resultados de 17 temporadas y un buscador con todos los partidos.
+**[Ver la página del proyecto](https://manuferrod.github.io/pronostico-laliga/)**: el pronóstico de la próxima jornada, los resultados de 13 temporadas y un buscador con todos los partidos.
 
 Un modelo pronostica local, empate o visitante en cada partido de Primera y se compara, partido a partido, con apostar siempre al favorito de Bet365.
 
 ## Resultados
 
-De 2010/11 a 2026/27, con datos hasta el 23 de noviembre de 2026. Los de la página se actualizan cada jornada.
+De 2014/15 a 2026/27, con datos hasta el 23 de noviembre de 2026. Los de la página se actualizan cada jornada.
 
-| 6.209 partidos | Modelo | Favorito de Bet365 |
+| 4.689 partidos | Modelo | Favorito de Bet365 |
 |---|---:|---:|
-| Partidos acertados | 55,2 % | 54,6 % |
-| Rentabilidad por apuesta | 0,0 % | −2,8 % |
-| Unidades, apostando 1 por partido | +0,7 | −171,9 |
-| Pérdida logarítmica (menos es mejor) | 0,970 | **0,954** |
+| Partidos acertados | **54,8 %** | 54,2 % |
+| Rentabilidad por apuesta | **+0,4 %** | −2,7 % |
+| Unidades, apostando 1 por partido | **+17,6** | −124,4 |
+| Pérdida logarítmica (menos es mejor) | 0,978 | **0,958** |
 
-La ventaja sobre el favorito es de **+2,78 puntos** de rentabilidad, con un intervalo del 95 % entre +1,25 y +4,31.
+La ventaja sobre el favorito es de **+3,03 puntos** de rentabilidad, con un intervalo del 95 % entre +1,09 y +4,96.
 
-### Cómo leerlos
+### Cómo se mide
 
-- **Son optimistas.** Cada partido se pronostica solo con datos anteriores a su fecha, pero las 8 variables se eligieron porque funcionaban bien en estas temporadas. La prueba sin ventaja de partida es el *registro limpio* de la página, que cuenta desde la jornada 13 de 2026/27.
-- **Las probabilidades de Bet365 son mejores.** El modelo acierta algo más de signos porque corrige al favorito en unos pocos partidos (el 6,8 %).
-- **Son cuentas sobre el papel**, a la cuota de apertura de Bet365. No es una recomendación para apostar.
+- **Nunca ve el futuro.** Cada partido se pronostica con un modelo entrenado solo con los anteriores.
+- **Mismos partidos y mismas cuotas** para el modelo y para Bet365: las de apertura.
+- **Se apuesta a todo**, una unidad por partido.
+- Es una simulación con datos históricos y las variables se seleccionaron con estas mismas temporadas. No es una recomendación para apostar.
 
 ## Cómo funciona
 
