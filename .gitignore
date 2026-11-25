@@ -1,0 +1,13 @@
+# Lista cerrada: se publica SOLO lo que aparece aquí con «!».
+# Los datos, las salidas y los cuadernos de descarga no se suben.
+/*
+!/.gitignore
+!/README.md
+!/PREPROCESADO_trabajo.ipynb
+!/MODELADO_trabajo.ipynb
+!/PRESENTACION_trabajo.ipynb
+!/docs/
+/docs/*
+!/docs/.nojekyll
+!/docs/index.html
+!/docs/portada.png
