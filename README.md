@@ -12,12 +12,12 @@ De 2014/15 a 2026/27, con datos hasta el 23 de noviembre de 2026. Los de la pág
 
 | 4.689 partidos | Modelo | Favorito de Bet365 |
 |---|---:|---:|
-| Partidos acertados | **54,8 %** | 54,2 % |
-| Rentabilidad por apuesta | **+0,4 %** | −2,7 % |
-| Unidades, apostando 1 por partido | **+17,6** | −124,4 |
-| Pérdida logarítmica (menos es mejor) | 0,978 | **0,958** |
+| Partidos acertados | **55,3 %** | 54,2 % |
+| Rentabilidad por apuesta | **+3,7 %** | −2,7 % |
+| Unidades, apostando 1 por partido | **+172,9** | −124,4 |
+| Pérdida logarítmica (menos es mejor) | 1,002 | **0,958** |
 
-La ventaja sobre el favorito es de **+3,03 puntos** de rentabilidad, con un intervalo del 95 % entre +1,09 y +4,96.
+La ventaja sobre el favorito es de **+6,34 puntos** de rentabilidad, con un intervalo del 95 % entre +4,08 y +8,60.
 
 ### Cómo se mide
 
@@ -34,7 +34,7 @@ La ventaja sobre el favorito es de **+3,03 puntos** de rentabilidad, con un inte
 4. **Modelado.** Regresión logística multinomial, reentrenada antes de cada fecha con los 1.520 partidos anteriores (cuatro temporadas). Los 380 últimos pesan el triple.
 5. **Presentación.** Lee lo que publica el modelo, comprueba que las cifras coinciden y escribe la página.
 
-El modelo usa 8 variables: dos probabilidades de la cuota (local y empate), la diferencia de goles reciente del local, el rendimiento relativo del visitante, la diferencia de puntos recientes, las ocasiones claras concedidas por el visitante, los toques del local en el área rival y la nota media de SofaScore del local.
+El modelo usa 14 variables: la cuota de Bet365 (probabilidad de que gane el local frente a la de que gane el visitante), los puntos de cada equipo en sus 10 últimos partidos en la misma condición (el local en casa, el visitante fuera), los pases filtrados de cada equipo, si el local viene de ganar a cuota mayor que 4, si a algún equipo ya no le queda nada en juego, la diferencia de goles de los 6 últimos partidos (del local, del visitante y la de uno menos la del otro), el xG concedido, los toques en el área rival, las ocasiones claras del local, cuánto movieron las casas la cuota del visitante en sus 5 últimos partidos y la efectividad (puntos por tiro a puerta en la temporada).
 
 ## Qué hay aquí
 
