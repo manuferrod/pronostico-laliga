@@ -238,12 +238,38 @@ footer b { color: var(--tiza) } footer a { color: var(--tiza) } footer p + p { m
   .senal-tabs { grid-template-columns: 1fr } .cuadros { grid-template-columns: repeat(18, minmax(0, 1fr)); gap: 4px } .marcador td { font-size: 1.25rem }
   .met { grid-template-columns: 52px 1fr 1fr 52px }
 }
+/* ── pregunta a los datos: el chat, como producto aparte ── */
+section.producto { padding-block: clamp(56px, 8vw, 104px) }
+.producto-rej { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 64px); align-items: center }
+.producto-txt .entrada { margin-top: 18px; font-size: 1.1rem; line-height: 1.55; color: #dcebe3; max-width: 52ch }
+.ventajas { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 12px; max-width: 52ch }
+.ventajas li { position: relative; padding-left: 24px; color: var(--tiza-2) }
+.ventajas li::before { content: ""; position: absolute; left: 0; top: .55em; width: 10px; height: 10px; border-radius: 2px; background: var(--modelo) }
+.ventajas b { color: var(--tiza) }
+.cta { display: inline-flex; align-items: center; gap: 10px; background: var(--modelo); color: var(--cesped-3); font: 800 1.06rem var(--titular); font-variation-settings: "wdth" 108; text-decoration: none; padding: 14px 26px; border-radius: 10px }
+.cta:hover { background: #ffe07a }
+.cta-nota { margin-top: 12px; font-size: .88rem; color: var(--tiza-2) }
+.ventana { margin: 0; background: var(--papel); color: var(--tinta); border-radius: 16px; padding: clamp(16px, 2vw, 22px); display: grid; gap: 12px; box-shadow: 0 18px 44px rgba(0, 0, 0, .28); min-width: 0 }
+.ventana figcaption { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--tinta-3); font-weight: 600 }
+.burbuja { padding: 10px 14px; max-width: 92%; font-size: .98rem }
+.burbuja.yo { justify-self: end; background: var(--cesped); color: var(--tiza); border-radius: 14px 14px 4px 14px }
+.burbuja.agente { background: var(--blanco); border: 1px solid var(--linea); border-radius: 4px 14px 14px 14px; display: grid; gap: 10px; max-width: 100%; min-width: 0 }
+.burbuja.agente p { max-width: none }
+.paso-chat { justify-self: start; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--verde); background: var(--verde-claro); border-radius: 6px; padding: 3px 8px }
+.mini-campo { background: var(--cesped); border-radius: 8px; padding: 12px 14px 8px; display: grid; gap: 8px }
+.grafico.mini .cero { stroke: var(--tiza-3); stroke-width: 1 }
+.grafico.mini .l-modelo { fill: none; stroke: var(--modelo); stroke-width: 3; stroke-linejoin: round }
+.grafico.mini .l-casa { fill: none; stroke: var(--casa); stroke-width: 2; stroke-dasharray: 6 5 }
+.grafico.mini .v-modelo { fill: var(--modelo); font-weight: 700; font-size: 12px }
+.grafico.mini .v-casa { fill: var(--casa); font-weight: 600; font-size: 12px }
+.grafico.mini .eje { fill: var(--tiza-2); font-size: 10.5px }
+@media (max-width: 1000px) { .producto-rej { grid-template-columns: 1fr } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } * { transition: none !important } }
 @media print { .barra, .mandos { display: none } }
 </style></head><body>
 <div class="barra"><div class="ancho">
   <a class="marca" href="#inicio"><span class="signos" aria-hidden="true"><i>1</i><i>X</i><i>2</i></span>Pronóstico LaLiga</a>
-  <nav aria-label="Secciones"><a href="#jornada">Jornada</a><a href="#resultados">Resultados</a><a href="#explorador">Partidos</a><a href="#proceso">Cómo funciona</a><a href="#reglas">Reglas</a></nav>
+  <nav aria-label="Secciones"><a href="#jornada">Jornada</a><a href="#resultados">Resultados</a><a href="#explorador">Partidos</a><a href="#chat">Pregunta a los datos</a><a href="#proceso">Cómo funciona</a><a href="#reglas">Reglas</a></nav>
 </div></div>
 
 <main>
@@ -313,6 +339,31 @@ footer b { color: var(--tiza) } footer a { color: var(--tiza) } footer p + p { m
       <div class="leyenda" style="margin-bottom:10px"><span><i></i>Modelo</span><span><i class="casa"></i>Bet365, siempre al favorito</span></div>
       <div class="grafico" id="g-temp" role="img" aria-label="Beneficio acumulado en la temporada elegida."></div></div>
     <div class="panel hoja c12"><header><h3 id="jor-tit"></h3></header><div class="resumen" id="jor-res"></div><div class="lista" id="jor-lista"></div></div>
+  </div>
+</div></section>
+<section class="campo producto" id="chat"><div class="ancho">
+  <div class="producto-rej">
+    <div class="producto-txt">
+      <p class="ante">Nuevo · un agente de IA con toda la base</p>
+      <h2>Pregunta a los datos</h2>
+      <p class="entrada">Un chat con un agente que tiene acceso a todos los datos del proyecto: 8.109 partidos desde 2005, con resultados, cuotas de veinte casas, xG, Elo, valor de plantilla, la estadística completa de SofaScore y los pronósticos del modelo. Le preguntas como a una persona y responde consultando los datos.</p>
+      <ul class="ventajas">
+        <li><b>Cifras de la base, no de memoria.</b> Cada respuesta enseña las consultas que ha hecho para que se puedan comprobar.</li>
+        <li><b>Tablas y gráficos.</b> Agrega, compara y dibuja lo que le pidas; las tablas se descargan en CSV.</li>
+        <li><b>Funciona dentro de Claude.</b> Hace falta una cuenta de Claude, y las preguntas cuentan para el plan de quien pregunta.</li>
+      </ul>
+      <p><a class="cta" href="https://claude.ai/artifact/SFY1k5JMnt29qBwpwFw3Yw" target="_blank" rel="noopener">Abrir el chat <span aria-hidden="true">↗</span></a></p>
+      <p class="cta-nota">Se abre en claude.ai, donde hay que iniciar sesión.</p>
+    </div>
+    <figure class="ventana">
+      <figcaption>Vista previa · una respuesta de ejemplo, con los datos de hoy</figcaption>
+      <div class="burbuja yo">¿Cómo le va al modelo esta temporada frente al favorito de Bet365?</div>
+      <div class="burbuja agente">
+        <span class="paso-chat">Consulta · predicciones · 129 partidos de 2026/27</span>
+        <p>En 2026/27 el modelo lleva <b>77 aciertos de 129</b> y <b>+16,4 unidades</b> apostando 1 a cada partido. Apostar siempre al favorito de Bet365 da 72 aciertos y −3,0 unidades.</p>
+        <div class="mini-campo"><div class="leyenda"><span><i></i>Modelo</span><span><i class="casa"></i>Favorito de Bet365</span></div><div class="grafico mini"><svg viewBox="0 0 380 150" role="img" aria-label="Unidades acumuladas en la temporada: modelo +16,4, favorito de Bet365 −3,0."><line x1="6" x2="330" y1="113.2" y2="113.2" class="cero"/><polyline points="6.0,95.6 33.0,112.4 60.0,95.4 87.0,105.6 114.0,110.9 141.0,113.9 168.0,119.0 195.0,127.6 222.0,124.1 249.0,118.9 276.0,108.7 303.0,118.4 330.0,130.0" class="l-casa"/><polyline points="6.0,95.6 33.0,112.4 60.0,78.1 87.0,88.3 114.0,93.6 141.0,96.6 168.0,97.8 195.0,68.5 222.0,57.8 249.0,64.5 276.0,54.3 303.0,10.0 330.0,21.6" class="l-modelo"/><text x="336" y="25.6" class="v-modelo">+16,4</text><text x="336" y="134.0" class="v-casa">−3,0</text><text x="6" y="146" class="eje">Jornada 1</text><text x="330" y="146" text-anchor="end" class="eje">Jornada 13</text></svg></div></div>
+      </div>
+    </figure>
   </div>
 </div></section>
 

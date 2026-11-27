@@ -4,6 +4,8 @@
 
 **[Ver la página del proyecto](https://manuferrod.github.io/pronostico-laliga/)**: el pronóstico de la próxima jornada, los resultados de 13 temporadas y un buscador con todos los partidos.
 
+**[Pregunta a los datos](https://claude.ai/artifact/SFY1k5JMnt29qBwpwFw3Yw)**: un chat con un agente de IA que consulta toda la base del proyecto y responde con cifras, tablas y gráficos. Se abre en claude.ai y hace falta una cuenta de Claude.
+
 Un modelo pronostica local, empate o visitante en cada partido de Primera y se compara, partido a partido, con apostar siempre al favorito de Bet365.
 
 ## Resultados
